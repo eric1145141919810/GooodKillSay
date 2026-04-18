@@ -1,0 +1,17 @@
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+.idea
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.code-workspace
+
+.DS_Store
+Thumbs.db
+
+run/

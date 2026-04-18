@@ -1,0 +1,6 @@
+{
+    "key.killsay.toggle": "切换开启/关闭",
+    "key.killsay.mode": "切换模式",
+    "key.killsay.reload": "重新加载配置",
+    "category.killsay": "KillSay"
+}
