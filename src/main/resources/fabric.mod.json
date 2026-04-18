@@ -3,13 +3,14 @@
     "id": "killsay",
     "version": "${version}",
     "name": "Goood KillSay",
-    "description": "A Fabric mod that sends messages when you kill someone in PvP!",
+    "description": "A Fabric 1.21.4 Mod that automatically sends messages in Minecraft PVP",
     "authors": [
         "Eric"
     ],
     "contact": {
-        "homepage": "https://github.com/eric1145141919810/GooodKillSay",
-        "sources": "https://github.com/eric1145141919810/GooodKillSay"
+          "homepage": "https://github.com/eric1145141919810/GooodKillSay",
+        "sources": "https://github.com/eric1145141919810/GooodKillSay",
+        "issues": "https://github.com/eric1145141919810/GooodKillSay/issues"
     },
     "license": "MIT",
     "environment": "client",
