@@ -15,8 +15,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -36,8 +38,14 @@ public class KillSayMod implements ClientModInitializer {
     private static final Random random = new Random();
     private static final File killsayFile = new File("killsay.txt");
     private static final File patternsFile = new File("killpatterns.json");
+    private static final File configFile = new File("killsayconfig.json");
     private static final Gson gson = new Gson();
     private static MinecraftClient client;
+    
+    private static class ModConfig {
+        boolean enabled = true;
+        int mode = 0;
+    }
     
     private static int tickCounter = 0;
     private static final int SPAM_INTERVAL = 300;
@@ -63,12 +71,44 @@ public class KillSayMod implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         client = MinecraftClient.getInstance();
+        loadConfig();
         loadMessages();
         loadKillPatterns();
         registerKeyBindings();
 
         ClientTickEvents.END_CLIENT_TICK.register(this::onClientTick);
         ClientReceiveMessageEvents.GAME.register(this::onGameMessage);
+    }
+    
+    private void loadConfig() {
+        if (!configFile.exists()) {
+            saveConfig();
+            return;
+        }
+
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(configFile), StandardCharsets.UTF_8))) {
+            ModConfig config = gson.fromJson(reader, ModConfig.class);
+            if (config != null) {
+                modEnabled = config.enabled;
+                currentMode = config.mode;
+                LOGGER.info("Loaded config: enabled={}, mode={}", modEnabled, currentMode);
+            }
+        } catch (Exception e) {
+            LOGGER.error("Failed to read config, using defaults", e);
+        }
+    }
+    
+    private void saveConfig() {
+        ModConfig config = new ModConfig();
+        config.enabled = modEnabled;
+        config.mode = currentMode;
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(configFile, StandardCharsets.UTF_8))) {
+            gson.toJson(config, writer);
+            LOGGER.info("Saved config: enabled={}, mode={}", modEnabled, currentMode);
+        } catch (Exception e) {
+            LOGGER.error("Failed to save config", e);
+        }
     }
     
     private void registerKeyBindings() {
@@ -110,6 +150,7 @@ public class KillSayMod implements ClientModInitializer {
     private void handleKeyBindings() {
         while (toggleKey.wasPressed()) {
             modEnabled = !modEnabled;
+            saveConfig();
             if (modEnabled) {
                 showMessage("§a§lKillsay 已开启§r - 当前模式: §b" + MODE_NAMES[currentMode]);
             } else {
@@ -119,11 +160,13 @@ public class KillSayMod implements ClientModInitializer {
         
         while (modeSwitchKey.wasPressed()) {
             currentMode = (currentMode + 1) % 3;
+            saveConfig();
             String modeDescription = getModeDescription(currentMode);
             showMessage("§d§l模式切换§r - 当前模式: §b" + MODE_NAMES[currentMode] + "§r (" + modeDescription + ")");
         }
         
         while (reloadKey.wasPressed()) {
+            loadConfig();
             loadMessages();
             loadKillPatterns();
             showMessage("§e§l配置已重新加载§r - §a" + messages.size() + "§r 条消息, §a" + killPatterns.size() + "§r 种击杀模式");
