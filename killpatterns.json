@@ -1,47 +1,5 @@
 [
-  {
-    "name": "原版击杀",
-    "pattern": "^(.*) killed (.*)$",
-    "killerGroup": 1,
-    "victimGroup": 2
-  },
-  {
-    "name": "原版击杀2",
-    "pattern": "^(.*) was killed by (.*)$",
-    "killerGroup": 2,
-    "victimGroup": 1
-  },
-  {
-    "name": "Hypixel",
-    "pattern": "^(.*) killed (.*)!$",
-    "killerGroup": 1,
-    "victimGroup": 2
-  },
-  {
-    "name": "Hypixel2",
-    "pattern": "^(.*) - (.*)$",
-    "killerGroup": 1,
-    "victimGroup": 2
-  },
-  {
-    "name": "Mineplex",
-    "pattern": "^(.*) killed (.*) with (.*)$",
-    "killerGroup": 1,
-    "victimGroup": 2
-  },
-  {
-    "name": "通用击杀",
-    "pattern": "^(.*) \\((\\d+)\\) killed (.*) \\((\\d+)\\)$",
-    "killerGroup": 1,
-    "victimGroup": 3
-  },
-  {
-    "name": "通用击杀2",
-    "pattern": "^\\[.*\\] (.*) killed (.*)$",
-    "killerGroup": 1,
-    "victimGroup": 2
-  },
-  {
+{
     "name": "被击败格式",
     "pattern": "^(.*) 被 (.*) 击败$",
     "killerGroup": 2,
