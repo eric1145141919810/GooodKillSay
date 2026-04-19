@@ -1,14 +1,26 @@
 [
-{
-    "name": "被击败格式",
+  {
+    "name": "sw1",
     "pattern": "^(.*) 被 (.*) 击败$",
     "killerGroup": 2,
     "victimGroup": 1
   },
   {
-    "name": "虚空娘格式",
+    "name": "sw2",
     "pattern": "^(.*) 与虚空娘在异世界相遇, 最终还是被 (.*) 击败!$",
     "killerGroup": 2,
     "victimGroup": 1
+  },
+  {
+    "name": "bw1",
+    "pattern": "^(.*) 击败了 (.*)!$",
+    "killerGroup": 1,
+    "victimGroup": 2
+  },
+  {
+    "name": "bw2",
+    "pattern": "^(.*) 击败了 (.*)! 最终击杀$",
+    "killerGroup": 1,
+    "victimGroup": 2
   }
 ]
