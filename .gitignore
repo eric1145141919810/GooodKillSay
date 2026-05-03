@@ -15,3 +15,8 @@ build/
 Thumbs.db
 
 run/
+
+# 不需要放进仓库的文件
+website/
+killsay.txt
+killpatterns.json
