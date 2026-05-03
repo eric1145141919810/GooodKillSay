@@ -1,0 +1,13 @@
+GG {name}!
+Nice try {name}!
+Better luck next time {name}!
+Ez {name}
+L {name}
+Got rekt {name}!
+Too easy {name}!
+Nice fight {name}!
+See you next time {name}!
+Skill issue {name}
+GGWP {name}
+You tried {name}
+Better luck next round {name}

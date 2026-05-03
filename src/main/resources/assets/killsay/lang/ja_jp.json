@@ -1,0 +1,6 @@
+{
+    "key.killsay.toggle": "Killsay をオン/オフ",
+    "key.killsay.mode": "モード切り替え",
+    "key.killsay.reload": "設定を再読み込み",
+    "category.killsay": "KillSay"
+}

@@ -1,0 +1,32 @@
+{
+    "schemaVersion": 1,
+    "id": "killsay",
+    "version": "${version}",
+    "name": "Goood KillSay",
+    "description": "A Fabric 1.21.4 Mod that automatically sends messages in Minecraft PVP",
+    "authors": [
+        "Eric"
+    ],
+    "contact": {
+          "homepage": "https://github.com/eric1145141919810/GooodKillSay",
+        "sources": "https://github.com/eric1145141919810/GooodKillSay",
+        "issues": "https://github.com/eric1145141919810/GooodKillSay/issues"
+    },
+    "license": "MIT",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "com.killsay.KillSayMod"
+        ]
+    },
+    "mixins": [
+    ],
+    "depends": {
+        "fabricloader": ">=0.16.10",
+        "minecraft": "~1.21.4",
+        "java": ">=21",
+        "fabric-api": "*"
+    },
+    "suggests": {
+    }
+}

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goood KillSay - Minecraft PVP Mod</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <span class="logo-icon">⚔️</span>
+            <span class="logo-text">Goood KillSay</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Goood KillSay</h1>
+          <p class="hero-subtitle">
+            一个 Minecraft Fabric 模组，让你的 PVP 更有气势
+          </p>
+
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-number">1.21.4</div>
+              <div class="stat-label">Minecraft 版本</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">3种</div>
+              <div class="stat-label">工作模式</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">自定义</div>
+              <div class="stat-label">发送文案</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">超低</div>
+              <div class="stat-label">误报率</div>
+            </div>
+          </div>
+
+          <div class="download-section">
+            <a
+              href="https://github.com/eric1145141919810/GooodKillSay/releases/download/Release/killsay-1.0.0.jar"
+              class="download-btn"
+            >
+              <span class="btn-icon">📦</span>
+              下载 Goood KillSay
+            </a>
+            <div class="download-note">
+              <span class="check-icon">✓</span> 完全免费
+              <span class="check-icon">✓</span> Fabric API
+              <span class="check-icon">✓</span> 开源项目
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">为什么选择 Goood KillSay？</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-text">
+              <h3>刷屏模式</h3>
+              <p>每15秒自动发送一条消息，随机选择在线玩家替换占位符</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚔️</div>
+            <div class="feature-text">
+              <h3>击杀模式</h3>
+              <p>仅在击杀时发送消息，通过正则表达式智能识别击杀信息</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔀</div>
+            <div class="feature-text">
+              <h3>混合模式</h3>
+              <p>同时开启刷屏和击杀模式，让你随时都能成为焦点</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⌨️</div>
+            <div class="feature-text">
+              <h3>自定义按键</h3>
+              <p>在游戏设置中自由配置按键，按K开关、M切换模式、R重载</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💾</div>
+            <div class="feature-text">
+              <h3>配置保存</h3>
+              <p>自动保存你的开关状态和模式选择，重启游戏无需重新设置</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔧</div>
+            <div class="feature-text">
+              <h3>灵活配置</h3>
+              <p>通过配置文件支持多种服务器的击杀格式，完全自定义</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section class="installation">
+      <div class="container">
+        <h2 class="section-title">如何安装 Goood KillSay</h2>
+        <div class="steps">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>准备工作</h3>
+              <p>确保已安装 Minecraft 1.21.4、Fabric Loader 和 Fabric API</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>下载文件</h3>
+              <p>下载 killsay-1.0.0.jar、killsay.txt 和 killpatterns.json</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>安装模组</h3>
+              <p>将 jar 文件放入 .minecraft/mods 文件夹</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>放置配置</h3>
+              <p>将 killsay.txt 和 killpatterns.json 放入游戏根目录</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>开始游戏</h3>
+              <p>启动游戏，按 K 键开启，享受你的 PVP 时光！</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Config Section -->
+    <section class="config-section">
+      <div class="container">
+        <h2 class="section-title">配置说明</h2>
+        <div class="config-cards">
+          <div class="config-card">
+            <div class="config-header">
+              <span class="config-icon">📄</span>
+              <h3>killsay.txt</h3>
+            </div>
+            <p>
+              存放你的消息内容，每行一条。使用
+              <code>{name}</code> 作为玩家名称的占位符。
+            </p>
+            <div class="code-box">
+              <pre>
+GG {name}!
+Nice try {name}!
+Better luck next time {name}!
+Ez {name}
+L {name}</pre
+              >
+            </div>
+          </div>
+          <div class="config-card">
+            <div class="config-header">
+              <span class="config-icon">📋</span>
+              <h3>killpatterns.json</h3>
+            </div>
+            <p>配置击杀消息的识别规则，支持自定义正则表达式。</p>
+            <div class="code-box">
+              <pre>
+[
+  {
+    "name": "sw1",
+    "pattern": "^(.*) 被 (.*) 击败$",
+    "killerGroup": 2,
+    "victimGroup": 1
+  }
+]</pre
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="key-info">
+          <h3 class="key-title">⌨️ 默认按键</h3>
+          <div class="key-grid">
+            <div class="key-item">
+              <div class="key-box">K</div>
+              <div class="key-desc">开关 Goood KillSay</div>
+            </div>
+            <div class="key-item">
+              <div class="key-box">M</div>
+              <div class="key-desc">切换工作模式</div>
+            </div>
+            <div class="key-item">
+              <div class="key-box">R</div>
+              <div class="key-desc">重新加载配置</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Github Section -->
+    <section class="github-section">
+      <div class="container">
+        <div class="github-box">
+          <div class="github-icon">🐙</div>
+          <div class="github-text">
+            <h2>开源项目</h2>
+            <p>Goood KillSay 是一个开源项目，欢迎贡献代码和建议！</p>
+          </div>
+          <a
+            href="https://github.com/eric1145141919810/GooodKillSay"
+            class="github-btn"
+            >访问 GitHub</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="logo-icon">⚔️</span>
+            <span class="logo-text">Goood KillSay</span>
+          </div>
+          <p class="footer-text">由 Eric 开发 | MIT License</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

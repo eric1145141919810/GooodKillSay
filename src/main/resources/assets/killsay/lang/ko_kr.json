@@ -1,0 +1,6 @@
+{
+    "key.killsay.toggle": "Killsay 켜기/끄기",
+    "key.killsay.mode": "모드 전환",
+    "key.killsay.reload": "설정 다시 불러오기",
+    "category.killsay": "KillSay"
+}
