@@ -77,38 +77,6 @@ Better luck next time {name}!
 2. **击杀模式** - 仅在检测到击杀时发送消息
 3. **混合模式** - 同时开启刷屏和击杀模式
 
-## 开源指南
-
-### 如何开源这个 Mod
-
-1. **创建 GitHub 仓库**
-   - 访问 https://github.com/new
-   - 仓库名称填写：`GooodKillSay`
-   - 设置为 Public（公开）
-   - 点击 "Create repository"
-
-2. **初始化 Git 仓库**
-   ```bash
-   cd d:\360MoveData\Users\syy\Desktop\killsay
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/eric1145141919810/GooodKillSay.git
-   git push -u origin main
-   ```
-
-3. **发布 Release**
-   - 在 GitHub 仓库页面点击 "Releases"
-   - 点击 "Draft a new release"
-   - 填写版本号（如：v1.0.0）
-   - 上传编译好的 jar 文件（在 `build/libs/` 文件夹中）
-   - 点击 "Publish release"
-
-4. **可选：发布到 CurseForge/Modrinth**
-   - 在相应平台注册账号
-   - 按照平台指引提交模组
-
 ## 构建
 
 使用 Gradle 构建：
